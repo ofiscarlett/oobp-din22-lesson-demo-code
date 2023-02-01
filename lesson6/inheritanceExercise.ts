@@ -19,3 +19,7 @@
     Create necessary classes and make sure they all 
     inherit from the same base class.
 */
+class Animal {
+  name: string;
+  
+}
