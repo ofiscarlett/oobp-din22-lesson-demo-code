@@ -20,6 +20,29 @@
     inherit from the same base class.
 */
 class Animal {
-  name: string;
-  
+  animalType: string;
+  anmialSound: string;
+  animalMove: string;
+ 
+  constructor(animalType:string, anmialSound: string, animalMove: string){
+    this.animalType = animalType;
+    this.anmialSound = anmialSound;
+    this.animalMove = animalMove;
+  }
+  makeMove(){
+    console.log(`The ${this.animalType} is ${this.animalMove}`);
+  }
+  makeSound(){
+    console.log(this.anmialSound);
+  }
+}
+
+
+class AnimalDoing extends Animal {
+    animalName: string;
+  constructor(animalType:string, anmialSound: string, animalMove: string, animalName:string){
+    super(animalType, anmialSound, animalMove);    
+    this.animalName = animalName;
+    }
+
 }
