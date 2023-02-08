@@ -16,7 +16,8 @@ person["name"] = "Max";
 let propertyName = "email";
 person[propertyName] = "new.email@com";
 
-function setNewValueToObjectProperty(object, propertyName, newValue) {
+//new value is any, then no limit to the value
+function setNewValueToObjectProperty(object, propertyName, newValue:any) {
   object[propertyName] = newValue;
 }
 

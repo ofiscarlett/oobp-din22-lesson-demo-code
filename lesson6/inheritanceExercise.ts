@@ -23,11 +23,12 @@ class Animal {
   animalType: string;
   anmialSound: string;
   animalMove: string;
- 
-  constructor(animalType:string, anmialSound: string, animalMove: string){
+  animalName: string;
+  constructor(animalType:string, anmialSound: string, animalMove: string, animalName:string){
     this.animalType = animalType;
     this.anmialSound = anmialSound;
     this.animalMove = animalMove;
+    this.animalName = animalName;
   }
   makeMove(){
     console.log(`The ${this.animalType} is ${this.animalMove}`);
@@ -38,11 +39,24 @@ class Animal {
 }
 
 
-class AnimalDoing extends Animal {
-    animalName: string;
-  constructor(animalType:string, anmialSound: string, animalMove: string, animalName:string){
-    super(animalType, anmialSound, animalMove);    
-    this.animalName = animalName;
+class Poultry extends Animal {
+    animalWings: number;
+  constructor(
+    animalType:string, 
+    anmialSound: string, 
+    animalMove: string, 
+    animalName:string, 
+    animalWings:number){
+    super(animalType, anmialSound, animalMove, animalName);    
+    this.animalWings = animalWings;
     }
-
+    howManyWings(){
+      console.log(`The ${this.animalType}, its name is ${this.animalName} is ${this.animalMove} and ${this.anmialSound} and it has ${this.animalWings} wings` );
+    }
 }
+
+const Animal1 = new Animal("Bird", "Twigy", "Flying", "Birdy");
+Animal1.makeMove();
+Animal1.makeSound();
+const Poultry1 = new Poultry("Bird", "Twigy", "Flying", "Birdy", 2);
+Poultry1.howManyWings();
