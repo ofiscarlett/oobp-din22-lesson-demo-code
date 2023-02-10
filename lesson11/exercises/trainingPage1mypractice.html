@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        color: white;
+        margin: 20px;
+      }
+
+      #firstBox {
+        border: 4px solid red;
+      }
+
+      #secondBox {
+        font-size: 20px;
+      }
+
+      .list {
+        border: 1px dashed black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello JS DOM World</h1>
+
+    <div id="firstBox" class="box">
+      This is the first box
+    </div>
+
+    <div id="secondBox" class="box">
+      This is the second box
+    </div>
+
+    <div class="list"> 
+      Shopping List
+      <ul id="shoppingList">
+        <li>Banana</li>
+        <li>Bread</li>
+        <li>Joghurt</li>
+        <li>Tomatos</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // 1. select the first box and change the text to "This is the first box"
+
+    const firstbox = document.getElementById("firstBox");
+    firstbox.innerHTML = ("This is the first box by checking");
+    console.log(firstbox.innerHTML);
+
+    // 2. modify hello is DOM... to -exercise2 is done
+    // 3 ways to do
+    
+    const h1 = document.querySelector("h1");
+    h1.innerText =("-Exercise 2 is done");
+
+    //3. Select all elements whic have class box and change their background color to black by 
+    //  using a getElementByClassNAme method
+    const boxes = document.getElementsByClassName("box");
+    for (let i =0; i<boxes.length; i++) {
+      boxes[i].style.backgroundColor = "black";
+    }
+
+    //To cnahge the shopping list border sytle from dashed to solid with js code
+    //const changeBoxborder2 = document.querySelector("list").style.border ="solid 2px red";
+
+
+    //becasue getelementbyclassname returns an array, we need to use the index to select the element
+    const changeBoxborder = document.getElementsByClassName("list");
+    //so here you need to tell which one you are going to change
+    //if only type style.border, you can change the all properties of the border, eg color, sytle, width
+    changeBoxborder[0].style.border="solid 2px red";
+    // border
+    console.log(changeBoxborder);
+
+  </script>
+</html>
