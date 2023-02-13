@@ -16,6 +16,7 @@ const users = [
 const ageLimit = 18;
 function checkAge(user) {
   return user.age >= ageLimit;
+  //return user.age >= 18;
 }
 
 function pureCheckAge(age, ageLimit) {
